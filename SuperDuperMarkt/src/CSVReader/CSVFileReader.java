@@ -30,9 +30,9 @@ public class CSVFileReader implements IProductsRepository {
 	        			LocalDate expiryDate = LocalDate.parse(line[2]);
 	        			double price = Double.parseDouble(line[3]);
 	        			LocalDate deliveryDay = LocalDate.parse(line[4]);
-	        			
+	        			LocalDate updateDay = LocalDate.parse(line[5]);
 	        			// Produktobjekt erstellen und zur Liste hinzufügen
-	        			Product product = new Product(name, quality, expiryDate, price,deliveryDay);
+	        			Product product = new Product(name, quality, expiryDate, price,deliveryDay,updateDay);
 	        			productsList.add(product);
 	        		}
 	        	} catch (IOException e) {
